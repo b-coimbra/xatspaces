@@ -1,0 +1,536 @@
+@charset "UTF-8";
+
+.container {
+	position: absolute;
+	margin: auto;
+	top: 0; bottom: 0;
+	right: 0; left: 0;
+	width: 350px;
+	height: 100px;
+	transition: all 0.8s ease-in-out;
+}
+
+.btn {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 233px;
+	height: 36px;
+	background: transparent;
+	border: 1px solid #FFF;
+}
+
+.btn:hover:after {
+	color: #1ba46f;
+}
+
+.btn:hover {
+	border: 1px solid #1ba46f;
+}
+
+.btn:active {
+	border: 1px solid #FFF;
+	background: #FFF;
+}
+
+.btn:active:after {
+	color: #000;
+}
+
+.btn:after {
+	content: 'Login';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 12px;
+	text-align: center;
+	margin: auto;
+	color: #FFF;
+	font-size: 10px !important;
+	text-transform: uppercase;
+	font-family: 'Arial', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0px;
+}
+
+.t {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 233px;
+	height: 36px;
+	background: transparent;
+	border-bottom: 1px solid #FFF;
+	-webkit-user-modify: read-write;
+	-moz-user-modify: read-write;
+	user-modify: read-write;
+	color: #FFF;
+	outline: 0;
+	line-height: 25px;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family: 'Arial', sans-serif;
+	overflow: hidden;
+	transition: all 0.3s;
+	background: url('../img/t.png') left no-repeat;
+}
+
+.t:focus {
+	border-bottom: 1px solid #1ba46f;
+	background: url('../img/tt.png') left no-repeat;
+}
+
+.t p {
+	position: absolute;
+	margin-left: 30px;
+	width: 200px;
+	height: 25px;
+	padding-top: 12px;
+	text-transform: initial;
+	overflow: hidden;
+}
+
+[name=a] {
+	position: absolute;
+	margin-top: -100%;
+	width: 100%;
+	height: 100%;
+	background: #383e45 url('../img/www.jpg') center no-repeat;
+	background-size: 100%;
+	transition: all .8s ease-in-out;
+	z-index: 90;
+}
+
+[name=a]:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: -1;
+	background: #000;
+}
+
+[name=a]:target {
+	margin-top: 0%;
+}
+
+embed {
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	transition: all 0.5s;
+	z-index: 9;
+	border: 1px solid #FFF;
+}
+
+.menu {
+	position: fixed;
+	left: -100px;
+	height: 100%;
+	width: 100px;
+	border-right: 4px solid transparent;
+	background: #222222;
+	transition: all 0.4s;
+	z-index: 99;
+	background-clip: content-box;
+}
+
+.menu:hover {
+	left: 0;
+}
+
+.menu:hover:after {
+	transform: rotateZ(90deg);
+}
+
+.menu:after {
+	content: '';
+	width: 30px;
+	height: 18px;
+	position: absolute;
+	right: -40px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url('../img/menu-i.png') center no-repeat;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.menu ul {
+	height: 100%;
+	width: 100px;
+	left: 0;
+	top: 0;
+	list-style: none;
+}
+
+.menu ul li {
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+.menu ul li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+}
+
+.menu ul li:nth-child(1) a{
+	background: url('../img/h.png') center no-repeat;
+}
+
+.menu ul li:nth-child(2) a{
+	background: url('../img/ttt.png') center no-repeat;
+}
+
+.menu ul li:nth-child(3) a{
+	background: url('../img/n.png') center no-repeat;
+}
+
+.menu ul li:nth-child(4) a{
+	background: url('../img/c.png') center no-repeat;
+}
+
+.menu ul li:nth-child(5) a{
+	background: url('../img/g.png') center no-repeat;
+}
+
+/* tests !!! */
+
+.slider {
+	position: absolute;
+ 	width: 100px;
+	height: 100px;
+	top: 0;
+	background-color: none;
+	transition: all .3s;
+	background-color: #383838;
+}
+
+.menu li:nth-child(1):hover ~ .slider {
+	top: 0px;
+	background-color: #383838;
+}
+
+.menu li:nth-child(2):hover ~ .slider {
+	top: 100px;
+	background-color: #263f73;
+}
+
+.menu li:nth-child(3):hover ~ .slider {
+	top: 200px;
+	background-color: #1ab33b;
+}
+
+.menu li:nth-child(4):hover ~ .slider {
+	top: 300px;
+	background-color: #cc2f2f;
+}
+
+.menu li:nth-child(5):hover ~ .slider {
+	top: 400px;
+	background-color: #2c313c;
+}
+
+
+/* ------------- */
+
+.flip-container {
+	perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 100px;
+	height: 100px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.user {
+	width: 100px;
+	height: 100px;
+	background: #FFF url('../img/u.png') center no-repeat;
+}
+
+.user-back {
+	position: absolute;
+	background: #FFF url('../img/uu.png') center no-repeat;
+	background-size: 100px;
+	width: 100px;
+	height: 100px;
+}
+
+.music {
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: 100%;
+	bottom: -100%;
+	width: 100%;
+	height: 100%;
+	background: #080809;
+	transition: all .8s;
+	z-index: 10;
+	cursor: default;
+}
+
+.music:after {
+	content: '';
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: -50px;
+	width: 30px;
+	height: 20px;
+	background: url('../img/ar.png') center no-repeat;
+	cursor: pointer;
+	transition: all 0.8s;
+}
+
+.music:focus {
+	top: 0;
+	bottom: 0;
+}
+
+.music:focus:after {
+	top: 50px;
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
+}
+
+.music:hover:after {
+	-webkit-filter: opacity(0.5);
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #FFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #1ba46f;
+}
+
+.ii {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 100%;
+	width: 500px;
+	list-style: none;
+	overflow-y: scroll;
+}
+
+.ii li {
+	position: relative;
+	margin: auto;
+	right: 0;
+	left: 0;
+	width: 98%;
+	height: initial;
+}
+
+.ii li img {
+	position: relative;
+	margin-top: 5px;
+	width: 100%;
+	height: 50%;
+	border-radius: 2px;
+}
+
+
+/*
+.btn-b {
+position: absolute;
+right: 25px;
+top: 0;
+bottom: 0;
+margin: auto;
+background: url('../img/n.png') center no-repeat;
+width: 13px;
+height: 21px;
+}
+
+[name=b] {
+position: absolute;
+width: 100%;
+height: 100%;
+background: #1c1e21;
+z-index: 10;
+left: -100%;
+transition: all 0.8s ease-in-out;
+}
+
+
+[name=b]:target {
+left: 0%;
+}
+.code {
+background: #272b33;
+font-size: 14px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+border-left: 5px solid #5a5d65;
+width: 50%;
+font-family:monospace;
+right: 0;
+left: 0;
+border-radius: 5px;
+outline: 0;
+margin: auto;
+height: 55%;
+top: 0 !important;
+bottom: 0 !important;
+white-space: pre-wrap;
+padding: 20px 20px 20px 50px;
+color: #c7d3de;
+counter-reset: step;
+counter-increment: step 0;
+position: absolute;
+box-sizing: border-box;
+-webkit-user-modify: read-write;
+user-modify: read-write;
+overflow-y: scroll;
+}
+
+.code span:nth-child(2n):after {
+color: #666e79;
+position: absolute;
+left: 15px;
+content: counter(step);
+counter-increment: step;
+}
+
+@media (max-width: 650px) {
+.code {
+width: 95%;
+}
+}
+
+[name=selector] {
+color: #d2945d;
+}
+
+[name=property] {
+color: #a6b2c0;
+}
+
+[name=value] {
+color: #57b6c2;
+}
+*/
+
+.nav {
+	position: fixed;
+	right: 25px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	width: 12px;
+	height: 68px;
+	list-style: none;
+	display: inline-block;
+	z-index: 99;
+}
+
+.nav li a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.nav li {
+	position: relative;
+	margin-top: 14px;
+	width: 4px;
+	height: 4px;
+	background: #FFF;
+	border-radius: 50%;
+	margin: 14px auto;
+	transition: .1s;
+	cursor: pointer;
+}
+
+.nav li:nth-child(1) {
+	-webkit-transform: scale(3);
+	transform: scale(3);
+}
+
+.nav li:hover {
+	-webkit-transform: scale(3);
+	transform: scale(3);
+}
+
+[name=b] {
+	background: #1c1e21;
+}
+
+[name=c] {
+	background: #206035;
+}
+
+[name=d] {
+	background: #7c2a43;
+}
+
+[name=b],[name=c],[name=d] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: -100%;
+	transition: all 0.8s ease-in-out;
+	box-shadow: 0px 0px 10px #000;
+}
+
+[name=b]:target,[name=c]:target,[name=d]:target {
+	top: 0%;
+}

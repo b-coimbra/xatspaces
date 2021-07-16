@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+#logo {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 304px;
+    height: 75px;
+}
+
+#nav {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #FFF;
+    border-left: 15px solid #35973c;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.sign {
+    position: absolute;
+    margin: auto;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #35973c;
+    bottom: 50%;
+    top: 48%;
+    left: -35px;
+    transition: all 0.5s ease;
+}
+
+#nav:hover .sign {
+    opacity: 0;
+}
+
+#nav:hover {
+    right: 0;
+}
+
+.flip-container {
+	perspective: 1000;
+    position: absolute;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 150px;
+    height: 150px;
+}
+
+[name=right-fix] {
+    right: 0;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    right: 0;
+	z-index: 2;
+	transform: rotateY(0deg);
+    background: #FFF url('../img/userfront.png') center no-repeat;
+    background-size: 70px;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    right: 0;
+	transform: rotateY(180deg);
+    background: #FFF url('../img/user.png')bottom center no-repeat;
+    background-size: 150px;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper,
+.flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.first-block {
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    background: #35973c;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+[name=back-fix] {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    background: #35973c;
+}
+
+.first-block p {
+    position: absolute;
+    top: 50px;
+    left: 35px;   
+}
+
+.second-block {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #ffffff url('../img/portfolio.png') center no-repeat;
+    background-size: 60px;
+}
+
+.second-block:hover {
+    background: #0015b9 url('../img/portfolio2.png') center no-repeat;
+    background-size: 60px;
+}
+
+.third-block {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    background: #35973c;
+    width: 150px;
+    height: 150px;
+}
+
+.msign {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    right: 0;
+    background: #35973c url('../img/music.png') center no-repeat;
+    background-size: 70px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.music:hover .msign {
+    top: -150px;
+}
+
+.music {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+}
+
+embed {
+    position: absolute;
+    left: -70px;
+}
+
+.spacefill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -99;
+    background: #000;
+    width: 300px;
+    height: 100%;
+    background: url('../img/fillbg.jpg')right repeat;
+    background-size: cover;
+    -webkit-animation: loop 30s steps(1000) infinite;
+}
+
+@-webkit-keyframes loop {
+    from {
+        background-position: 0;
+    }
+}
+
+.aboutme {
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    top: 350px;
+    background: #FFF url('../img/info.png') center no-repeat;
+    background-size: 70px;
+}
+
+.aboutme:hover {
+    background: #FFF url('../img/info2.png') center no-repeat;
+    background-size: 70px;
+    transition: 0s;
+}
+
+.aboutme:focus {
+    height: 50%;
+    background: #FFF;
+    transition: all 0.5s ease;
+}
+
+.aboutme:focus .text {
+    z-index: 1;
+}
+
+[name=text] {
+    position: absolute;
+    top: 44px;
+    margin: auto;
+    left: 0;
+    right: 10px;
+    z-index: -1;
+    width: 173px;
+    height: 60px;
+}
+
+[name=lines] {
+    top: 40px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.text {
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 150px;
+}
+
+.media {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 300px;
+}
+
+.tumblr {
+    left: 0;
+    background: #FFF url('../img/tumblr.png') center no-repeat;
+    background-size: 30px;
+}
+
+.tumblr:hover {
+    -webkit-filter: invert(1);
+}
+
+.tumblr,
+.twitter {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+}
+
+.twitter {
+    left: 75px;
+    background: #35973c url('../img/twitter.png') center no-repeat;
+    background-size: 35px;
+}
+
+.twitter:hover {
+    background: #000 url('../img/twitter.png') center no-repeat;
+    background-size: 35px;
+}
+
+.linkedin {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    left: 150px;
+    background: #FFF url('../img/linkedin.png') center no-repeat;
+    background-size: 30px;
+}
+
+.linkedin:hover {
+    -webkit-filter: invert(1);
+}
+
+.gear {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    right: 0;
+    background: #35973c url('../img/gear.png') center no-repeat;
+    background-size: 30px;
+}
+
+.gear:hover {
+    background: #000 url('../img/gear.png') center no-repeat;
+    background-size: 30px;
+}
