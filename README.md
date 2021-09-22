@@ -10,6 +10,3 @@
 
 ## 004
 <img src="previews/1.gif" height="300">
-
-## 005
-<img src="previews/4.gif" height="300">
